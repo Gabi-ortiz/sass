@@ -1,0 +1,168 @@
+
+#body {
+    background-image:url(../imagenes/logo.jpeg);
+    color: white;
+    font-family: cursive;
+}    
+
+/*menu*/
+#header {
+    display: grid;
+    grid-template-columns: 29% 69%;
+    column-gap: 2%;
+    align-items: center;
+    font-family: 'Kalam', cursive;
+    text-transform: uppercase;
+    width: 100%;
+    height: auto;
+}    
+
+ul.menu{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    
+}    
+
+ul.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+ul.menu li a:hover{
+    background-color: grey;
+}
+.titulo{
+    display: flex;
+    text-justify:distribute;
+    margin-left: 10px;
+}
+
+/*menu*/
+
+/*section index*/
+#sectionIndex {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 2%;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+main img.imagenIndex{
+    width: 100%;
+    height: auto;
+}
+
+/*section index*/
+
+/*Footer*/
+#footer p {
+    display: flex;
+    justify-content: center;
+    font-size:x-large;
+    background-color: gray;
+    padding: 10px;
+    margin-top: 50px;
+}
+/*Footer*/
+
+/*section Nosotros*/
+#sectionNosotros{
+    display: grid;
+    justify-items: center;
+    grid-template-areas:
+    "texto texto"
+    "imagen1 imagen"
+}
+.imagen1{
+    grid-area:imagen1;
+    width: 80%;
+    height: auto;
+    margin-top: 30px;
+}
+.imagen{
+    grid-area: imagen;
+    width: 80%;
+    height: auto;
+    margin-top: 30px;
+    
+}
+.texto{
+    grid-area: texto;
+}
+
+/*section Nosotros*/
+
+/*Tabla productos*/
+#tableProductos{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    padding: 10px;
+}
+main div img.imgProd{
+    max-width: 80%;
+    height: auto;
+}
+
+main div img.imgProd:hover{
+    width: 50%;
+    height: auto;
+    transition-duration: 2s ;
+}
+
+/*Tabla productos*/
+
+/*ubicacion*/
+#ubicacion {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+}
+.mapa{
+    max-width: 70%;
+}
+iframe.mapa:hover{
+    width: 90%;
+    transition-duration: 2s;
+}
+
+/*ubicacion*/
+
+/*Formulario*/
+form div {
+    margin: 25px;
+}
+
+/*Formulario*/
+
+
+@media screen and (max-width: 768px) {
+    body header#header {
+        grid-template-areas:
+        "titulo titulo"
+        "menu menu"
+        ;
+    }
+    .menu{
+        grid-area: menu;
+    }
+    ul.menu{
+        display: inline-flex;
+        
+    }
+    .titulo{
+        grid-area:titulo;
+        max-width: 70%;
+        height: auto;
+    }
+    #sectionIndex{
+        display: flex;
+        flex-direction: column;
+    }
+    #sectionNosotros{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
